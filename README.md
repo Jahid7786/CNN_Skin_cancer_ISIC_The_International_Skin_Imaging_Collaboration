@@ -18,4 +18,26 @@ Overall, the project's focus on developing an accurate skin cancer classificatio
 # Dataset
 The HAM10000 dataset is commonly used in skin cancer classification tasks due to its extensive collection of 10,015 dermatoscopic images of pigmented skin lesions, which are classified into seven different types. The dataset provides a representative range of the major diagnostic categories of skin lesions, including Actinic keratoses and intraepithelial carcinoma/Bowen's disease (akiec), basal cell carcinoma (bcc), benign keratosis-like lesions such as solar lentigines/seborrheic keratoses and lichen-planus like keratosis (bkl), dermatofibroma (df), melanoma (mel), melanocytic nevi (nv), and vascular lesions such as angiomas, angiokeratomas, pyogenic granulomas, and haemorrhage, vasc.
 
+## Conclusion:
 By using this dataset in skin cancer classification tasks, researchers and practitioners can train and test models to accurately differentiate between the various types of skin cancer. The diversity of the dataset allows for a more comprehensive understanding of skin lesions and better support for dermatological clinical work.
+
+## Technology Used:
+import pathlib
+import os
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+import PIL
+
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+from tensorflow.keras.models import Sequential
+
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import ModelCheckpoint,EarlyStopping
+
+from tensorflow.keras.preprocessing.image import load_img
+
